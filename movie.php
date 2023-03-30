@@ -3,7 +3,7 @@
 class Movie{
     public $titolo; 
     public $attori; 
-    public $genere; 
+    public $genere = []; 
     public $valutazione; 
 
     function __construct($_titolo, $_genere){
@@ -11,8 +11,8 @@ class Movie{
         $this -> genere = $_genere;
     }
 
-    function getVote($valutazione){
-        if($valutazione >= 4){
+    function getVote($vote){
+        if($vote >= 4){
             return 'Consigliato';
         }
     }
